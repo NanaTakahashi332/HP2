@@ -1,7 +1,7 @@
 body {
   font-family: Noto San JP, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif sans-serif;
   line-height: 1.6;
-  margin:;
+  /* margin:; */
   box-sizing: border-box;
   background-color: #fff;
   color: #4A4A4A;
@@ -44,6 +44,7 @@ header {
   /* top:;
   left:; */
   width: 100%;
+  height:72px;
   font-size: 16px;
   z-index: 1000;
 }
@@ -51,7 +52,7 @@ header {
 header .container,.container-header{
   display: flex;
   justify-content: space-between;
-    align-items: center;
+  align-items: center;
 }
 
 header .container {
@@ -69,10 +70,8 @@ header img {
 }
 
 nav ul {
-  width:80%;
+  width:100%;
   list-style: none;
-  /* padding:;
-  margin:; */
   display: flex;
 }
 
@@ -127,8 +126,10 @@ nav a {
   gap:5%;
   box-sizing: border-box;
   padding: 2rem 5rem;
-  border-radius: 20px;
+  border-radius:2rem;
   background-image: url(../img/top_whatwedo.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .activity_midashi{
@@ -154,7 +155,7 @@ nav a {
   border: 2px solid #00345D;
   margin: 2rem.5rem;
   padding:.5rem 1rem;
-  font-size: 20px;
+  font-size:16px;
   border-radius: 50px;
 }
 
@@ -166,7 +167,7 @@ nav a {
 
 /* top Service */
 #top_service {
- padding: 4rem;
+ padding: 4rem 0;
  background-color: rgba(218, 231, 242,.8);
  box-sizing: border-box;
 }
@@ -192,9 +193,13 @@ gap:5%;
   gap:2.5%;
 }
 
+.top_service_contents_item:last-of-type{
+  margin-bottom: 0;
+}
+
 .top_service_contents_item img{
-width:30%;
-border-radius:30px ;
+  width:30%;
+  border-radius:30px ;
 }
 
 .top_service_contents_item_description{
@@ -209,7 +214,7 @@ border-radius:30px ;
 
 /* top News */
 #top_news {
- margin:4rem;
+ margin-top:6rem;
 }
 
 #top_news .container {
@@ -233,7 +238,7 @@ border-radius:30px ;
   border: 2px solid #79A1C0;
   margin: 2rem.5rem;
   padding:.5rem 1rem;
-  font-size: 20px;
+  font-size:16px;
   border-radius: 50px;
 }
 
@@ -242,7 +247,6 @@ border-radius:30px ;
 	opacity:0.5;
 	transition:0.3s;
 }
-
 
 .top_news_contents_item{
   margin-bottom: 2.5rem;
@@ -253,7 +257,7 @@ border-radius:30px ;
 
 .top_news_contents_item img{
 width:30%;
-border-radius:20px;
+border-radius:2rem;
 }
 
 .top_news_contents_item_descroption{
@@ -283,38 +287,44 @@ border-radius:20px;
  background-image: url(../img/top_career.png);
  background-repeat: no-repeat;
  background-size: cover;
- border-radius: 20px;
+ border-radius:2rem;
 }
 
 .top_career_description{
   width:52.5%;
 }
 
+.top_career_description h4{
+ margin:4rem 0 2rem 0;
+ font-size: 22px;
+}
+
 .top_career_photo{
   width:42.5%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap:2rem;
 }
 
 .top_career_photo img{
-  width:40%;
+  width:100%;
 }
 
 .top_career_photo_1{
-  grid-column: 1 /  2;
-  grid-row: 1 /  2;
+  grid-column: 1 / 2;
+  grid-row: 1 /  3;
 }
 
 .top_career_photo_2{
   grid-column: 2 /  3;
-  grid-row: 2 /  3;
+  grid-row: 2 /  4;
 }
 
 .top_career_photo_3{
   grid-column: 1 /  2;
-  grid-row: 3 /  4;
+  grid-row: 3 /  5;
 }
+
 
 
 
@@ -426,19 +436,23 @@ footer {
 /* サブページ共通の設定 */
 .sub_midashi{
   width:100%;
-  height:70vh;
+  height:60vh;
+  padding-top:72px;
   background-size: cover;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;  
 }
 
 .heading{
- padding-top:14rem;
+ padding:auto;
  color:#ffffff;
  font-size: 60px;
  line-height: 50px;
 }
 
 .heading span{
- font-size: 20px;
+ font-size:2rem;
 }
 
 
@@ -454,7 +468,7 @@ footer {
 }
 
 .company_heading{
-  margin: 2rem;;
+  margin: 2rem 0;
   color:#00345D ;
   font-size: 30px;
 }
@@ -497,7 +511,7 @@ footer {
   padding: 3rem 2rem;
   background-color: #FFFFFF;
   box-sizing: border-box;
-  border-radius: 20px;
+  border-radius:20px;
 }
 
 #mission h3{
@@ -514,12 +528,12 @@ footer {
 }
 
 #profile{
-  margin:4rem;
+  margin:4rem 0;
 }
 
 #profile table{
   width:100%;
-  margin:2rem;
+  margin:2rem 0;
   border-spacing: 15px;
 }
 
@@ -538,8 +552,8 @@ footer {
 }
 
 #profile table th, #profile table td{
-    padding: 14px; 
-    border-bottom: 1.5px solid #79A1C0; 
+  padding: 1.5rem 0; 
+  border-bottom: 1.5px solid #79A1C0; 
 }
 
 #profile .noborder{
@@ -798,7 +812,7 @@ footer {
 }
 
 .news_contents_textblock_item h6{
-  padding:0.5rem.5rem;
+  padding:0.5rem 1.5rem;
   display: inline-block;
   border:1.5px solid #00345D;
   border-radius:50px ;
@@ -897,7 +911,7 @@ footer {
 }
 
 .career_recruit_box h3{
-  width:80%;
+  width:100%;
   text-align: center;
   font-size: 24px;
 }
@@ -972,11 +986,12 @@ footer {
 }
 
 #contact_text{
-  margin: 4rem 0;
+  max-width:60%;
+  margin: 4rem  auto;
 }
 
 #contact_text p{
-  width: 60%;
+  display: inline-block;
   margin: 0 auto;
 }
 
@@ -989,7 +1004,7 @@ footer {
 .contact_form_item {
   /* border-top: 1px solid #ddd; */
   padding:1.75rem; 
-  width: 80%;
+  width:100%;
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -1068,14 +1083,15 @@ margin-bottom:2rem
 .Form-Btn {
   width: 20%;
   display: block;
-  border-radius: 20px;
+  border-radius:20px;
   margin:1rem auto;
   padding:1rem 2rem ; 
   letter-spacing: 0.05em;
   background: #001F42;
   color: #ffffff;
   font-weight: bold;
-  font-size: 20px;
+  font-size:16px;
+  cursor: pointer;
 }
 
 .Form-Btn:hover{
@@ -1086,8 +1102,8 @@ margin-bottom:2rem
 .checkbox {
   appearance: none;
   position: relative;
-  width: 20px;
-  height: 20px;
+  width:2rem;
+  height:2rem;
   border: 1px solid #001F42;
   border-radius: 2px;
   cursor: pointer;
@@ -1100,8 +1116,8 @@ margin-bottom:2rem
 .checkbox:checked::after {
   content: "";
   position: absolute;
-  top: 5px;
-  left: 3px;
+  top: 10px;
+  left: 8px;
   width: 12px;
   height: 6px;
   border-bottom: 2px solid #ffffff;
