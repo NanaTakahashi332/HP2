@@ -130,6 +130,7 @@ nav a {
   background-image: url(../img/top_whatwedo.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  align-items: center;
 }
 
 .activity_midashi{
@@ -528,7 +529,7 @@ footer {
 }
 
 #profile{
-  margin:4rem 0;
+  margin:4rem;
 }
 
 #profile table{
@@ -579,11 +580,11 @@ footer {
 }
 
 #service_message .container{
-  width:55%;
+  width:60%;
 }
 
 .service_heading{
-  margin: 1.5rem;
+  margin-bottom: 1.5rem;
   text-align: center;
   font-size: 30px;
   color: #00345D;
@@ -674,11 +675,11 @@ footer {
 }
 
 .arrow_button{
-  width:2.5rem;
-  height:2.5rem;
-  font-size: 2.5rem;
-  line-height:2.5rem;
-  padding:.5rem;
+  width:2rem;
+  height:2rem;
+  font-size: 2rem;
+  line-height:2rem;
+  padding:0.5rem;
   position: absolute;
   right:10%;
   top:50%;
@@ -734,11 +735,11 @@ footer {
 }
 
 .service_newbiz_nayami_example .arrow_button_nayami{
-  width:2.5rem;
-  height:2.5rem;
-  font-size: 2.5rem;
-  line-height:2.5rem;
-  padding:.5rem;
+  width:2rem;
+  height:2rem;
+  font-size: 2rem;
+  line-height:2rem;
+  padding:0.5rem;
   display: block;
   background-color:#00345D;
   border-radius: 50px;
@@ -830,15 +831,20 @@ footer {
 }
 
 .news_contents_textblock .arrow_button_news{
-  width:2rem;
-  height:2rem;
-  font-size: 2rem;
-  line-height:2rem;
-  padding:.5rem;
+  width:1.5rem;
+  height:1.5rem;
+  font-size: 1.5rem;
+  line-height:1.5rem;
+  padding: 0.5rem;
   background-color:#00345D;
   border-radius: 50px;
   color: #ffffff;
   display: block;
+}
+
+.news_contents_textblock .arrow_button_news:hover{
+  transition: .3s ease-in-out;
+  opacity:0.75;
 }
 
 
@@ -992,7 +998,8 @@ footer {
 
 #contact_text p{
   display: inline-block;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+    text-align: center;
 }
 
 #contact_form{
@@ -1024,7 +1031,7 @@ footer {
 
 .Form-Item-Label-Required {
   border-radius: 50px;
-  margin-right: 0.5rem;
+  margin-left: 0.75rem;
   padding: 0 0.5rem;
   width: 15%;
   display: inline-block;
@@ -1092,6 +1099,8 @@ margin-bottom:2rem
   font-weight: bold;
   font-size:16px;
   cursor: pointer;
+  border:none;
+  border-radius:50px;
 }
 
 .Form-Btn:hover{
