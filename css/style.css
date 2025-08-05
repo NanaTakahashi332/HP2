@@ -145,6 +145,173 @@ nav a {
   color: #224466;
 }
 
+/* ヘッダー　 表示切り替え*/
+.pctab-only {
+    display: block; 
+}
+
+.sp-only, header-wrap{
+  display: none;
+}
+
+@media screen and (max-width: 480px){
+.sp-only, header-wrap{
+  display: block;
+}
+}
+
+@media screen and (max-width: 480px){
+.pctab-only{
+  display: none;
+}
+}
+
+
+.header-wrap__nav {
+  margin-right: 130px;
+}
+
+.header-wrap__nav__list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* ヘッダー　ハンバーガーメニュー */
+.h-open {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  aspect-ratio:1/1;
+    width: 3.75rem;
+    height: 3.75rem;
+  /* height:6rem; */
+  background-color: #224466;
+  text-align: center;
+}
+
+.h-open span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 26%;
+  height: 0.2rem;
+  border-radius: 2px;
+  background-color: #fff;
+  width: 50%;
+}
+
+@media screen and (max-width: 480px) {
+  .h-open span {
+    left:25%;
+  }
+}
+
+.h-open span:nth-of-type(1) {
+  top: 28%;
+}
+
+.h-open span:nth-of-type(2) {
+  top: 50%;
+}
+
+.h-open span:nth-of-type(3) {
+  top: 72%;
+}
+
+.h-open.active span:nth-of-type(1) {
+  left: 24px; 
+  top: 25px;
+  left: 15px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 50%;
+}
+
+.h-open.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.h-open.active span:nth-of-type(3) {
+  top: 38px;
+  left: 15px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 50%;
+}
+
+
+@media screen and (max-width: 480px){
+#h-nav {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  /* left: 100%; */
+    right: -120%;
+  width:50%;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 0px 10px 10px rgb(0 0 0 / 20%);
+  transition: left 0.6s;
+}
+
+#h-nav.panelactive {
+    /* right: 0;  */
+    left: 50%; 
+}
+
+#h-nav ul {
+  width:70%;
+  display: block;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+#h-nav li {
+  position: relative;
+  border-bottom: solid 1.5px #224466;
+  margin: 10% 0;
+}
+}
+
+
+@media screen and (max-width: 480px) {
+#h-nav li {
+  margin: 30% 0;
+}
+
+/* #h-nav li::after {
+  position: absolute;
+  content: "";
+  left: -15px;
+  bottom: 0;
+  height: 100%;
+  width: 3.75px;
+  background-color: #224466
+} */
+
+#h-nav li a {
+  color: #333;
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+#h-nav.panelactive {
+  right: 0;
+}
+}
+
+
+
+
+
+
+
 
 /* fv*/
 #fv {
@@ -279,6 +446,12 @@ nav a {
 }
 }
 
+@media screen and (max-width: 480px){
+  #activity a{
+    margin:1.5rem 0;
+  } 
+}
+
 .activity_comment{
   width: 65%;
 }
@@ -390,9 +563,10 @@ nav a {
 
 @media screen and (max-width: 480px){
  .top_service_contents_item img{
-  width:80%;
+  width:100%;
   display: block;
   margin: 0 auto;
+  aspect-ratio: 3/2;
 } 
 }
 
@@ -456,6 +630,12 @@ nav a {
 /* top News */
 #top_news {
  margin-top:6rem;
+}
+
+@media screen and (max-width: 480px){
+#top_news {
+ margin-top:2rem;
+}  
 }
 
 #top_news .container {
@@ -535,9 +715,10 @@ border-radius:2rem;
 
 @media screen and (max-width: 480px){
  .top_news_contents_item img{
-width:80%;
+width:100%;
 display: block;
 margin: 0 auto;
+aspect-ratio: 3/2;
 } 
 }
 
@@ -547,7 +728,7 @@ margin: 0 auto;
 
 @media screen and (max-width: 480px){
  .top_news_contents_item_descroption{
-  width:80%;
+  width:100%;
   margin: 1rem auto 0;
 } 
 }
@@ -774,6 +955,13 @@ font-size: 10px;
   vertical-align: middle;
 }
 
+@media screen and (max-width: 480px){
+#information h5 {
+  font-size: 18px;
+  vertical-align: middle;
+}  
+}
+
 .information-midashi{
   padding-bottom: 1.5rem;
   display: flex;
@@ -807,6 +995,12 @@ font-size: 10px;
 
 .information-midashi-sub-sub img{
   width:15%
+}
+
+@media screen and (max-width: 480px){
+ .information-midashi-sub-sub img{
+  width:12.5%
+} 
 }
 
 #information ul{
@@ -1840,8 +2034,23 @@ footer {
   transition: all .3s;
 }
 
+@media screen and (max-width: 480px){
+ .career_recruit_box{
+  padding:1rem 0.25rem;
+} 
+}
+
 .career_recruit_box:hover{
  transform: scale(1.1,1.1);
+}
+
+@media screen and (max-width: 480px){
+ .career_recruit_box a{
+  width:100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+} 
 }
 
 .career_recruit_box_sub{
@@ -1849,6 +2058,12 @@ footer {
   justify-content: center;
   gap:5%;
   align-items: center;
+}
+
+@media screen and (max-width: 480px){
+ .career_recruit_box_sub{
+  width:100%;
+} 
 }
 
 .career_recruit_box_sub_navy_arrow{
@@ -1867,6 +2082,13 @@ footer {
 }
 }
 
+@media screen and (max-width: 480px){
+   .career_recruit_box_sub_navy_arrow{
+  width: 1.5rem;
+  height: 1.5px;
+} 
+}
+
 @media screen and (max-width: 768px){
 .career_recruit_box{
   padding:1.25rem 0.75rem;
@@ -1875,7 +2097,7 @@ footer {
 
 @media screen and (max-width: 480px){
 .career_recruit_box{
-  padding:1rem;
+  padding:0.25rem;
   aspect-ratio: 1 / 1;
 }  
 }
@@ -1895,9 +2117,18 @@ footer {
 
 @media screen and (max-width: 768px){
  .career_recruit_box_sub_navy_arrow::before, .career_recruit_box_sub_navy_arrow::after{
+  top: calc(50% - 1px);
   width: 1rem;
   height: 2px;
 } 
+}
+
+@media screen and (max-width: 480px){
+ .career_recruit_box_sub_navy_arrow::before, .career_recruit_box_sub_navy_arrow::after{
+  top: calc(50% - 1.3px);
+  width: 0.75rem;
+  height: 1.5px;
+}   
 }
 
 .career_recruit_box_sub_navy_arrow::before{
@@ -2089,6 +2320,7 @@ footer {
 @media screen and (max-width: 480px){
  .career_casual_box img{
   width:100%;
+  margin-bottom: 2rem;;
 } 
 }
 
@@ -2104,16 +2336,34 @@ footer {
   margin: 4rem  0;
 }
 
+@media screen and (max-width: 480px){
+#contact_text{
+  margin: 2rem  0;
+}  
+}
+
 #contact_text p{
   display:block;
   /* margin: 0 auto; */
     text-align: center;
 }
 
+@media screen and (max-width: 480px){
+#contact_text p{
+  text-align: left;
+}  
+}
+
 #contact_form{
   width:100%;
   padding: 4rem 0;
   background-color:#DAE7F280;
+}
+
+@media screen and (max-width: 480px){
+ #contact_form{
+  padding: 2rem 0;
+} 
 }
 
 .contact_form_item {
@@ -2124,6 +2374,13 @@ footer {
   align-items: center;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px){
+.contact_form_item {
+  display: block;
+  padding:0; 
+}  
 }
 
 .Form-Item-Label {
@@ -2137,6 +2394,14 @@ footer {
  .Form-Item-Label {
   font-size: 16px;
 } 
+}
+
+@media screen and (max-width: 480px){
+  .Form-Item-Label {
+  width:100%;
+  margin-top: 1.25rem;
+  font-size: 14px;
+}  
 }
 
 .Form-Item-Label.isMsg {
@@ -2180,6 +2445,15 @@ footer {
 }
 }
 
+@media screen and (max-width: 480px){
+   .Form-Item-Input {
+    margin-top: 0.5rem;
+    margin-left: 0;
+    height: 2rem;
+    font-size: 12px;
+    box-sizing: border-box;
+} 
+}
 
 .Form-Item-Textarea-title {
   border: 1px solid #ddd;
@@ -2190,6 +2464,18 @@ footer {
   flex: 1;
   background: #ffffff;
   font-size: 18px;
+}
+
+@media screen and (max-width: 480px){
+.Form-Item-Textarea-title {
+  width:100%;
+  margin-top: 0.5rem;
+  margin-left: 0;
+  padding:1em;
+  height: 4rem;
+  font-size: 18px;
+  box-sizing: border-box;
+}  
 }
 
 .Form-Item-Textarea {
@@ -2203,16 +2489,40 @@ footer {
   font-size: 18px;
 }
 
+@media screen and (max-width: 480px){
+.Form-Item-Textarea {
+  width:100%;
+  height: 6rem;
+  margin-top: 0.5rem;
+  margin-left: 0;
+  font-size: 12px;
+  box-sizing: border-box;
+}  
+}
+
 #contact_submit{
   margin:4rem 0;
 }
 
+@media screen and (max-width: 480px){
+#contact_submit{
+  margin:2rem 0;
+}  
+}
+
 #contact_submit .container{
-text-align: center;
+  text-align: center;
 }
 
 #contact_submit p{
-margin-bottom:2rem
+  margin-bottom:2rem;
+}
+
+@media screen and (max-width: 480px){
+ #contact_submit p{
+  text-align: left;
+  margin-bottom:1.5rem;
+} 
 }
 
 .Form-Btn {
@@ -2238,6 +2548,16 @@ margin-bottom:2rem
 } 
 }
 
+@media screen and (max-width: 480px){
+.Form-Btn {
+    width: 30%;
+  margin:1rem auto;
+  padding:0.5rem 1rem ; 
+  letter-spacing: 0.05em;
+  font-size:12px;
+}  
+}
+
 .Form-Btn:hover{
   opacity:0.5;
 	transition:0.3s;
@@ -2258,6 +2578,13 @@ margin-bottom:2rem
   width:1.5rem;
   height:1.5rem;
 } 
+}
+
+@media screen and (max-width: 480px){
+ .checkbox {
+  width:1.25rem;
+  height:1.25rem;
+}   
 }
 
 .checkbox:checked {
@@ -2281,6 +2608,13 @@ margin-bottom:2rem
   top: 6px;
   left: 4px;
 }
+}
+
+@media screen and (max-width: 480px){
+   .checkbox:checked::after {
+  top: 4px;
+  left: 2px;
+} 
 }
 
 .checkboxItem a{
