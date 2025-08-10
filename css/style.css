@@ -36,6 +36,9 @@ a {
   color: #224466;
 }
 
+nav{
+transition: all .5s ease-in-out;
+}
 
 img {
   object-fit: cover;
@@ -187,7 +190,7 @@ header img {
 
 @media screen and (max-width: 768px){
 .header-wrap{
-    display: block;
+  display: block;
 }
 
 .header-wrap__nav {
@@ -312,25 +315,34 @@ header img {
 }   
 }
 
-
 @media screen and (max-width: 768px){
 #h-nav {
   position: fixed;
   z-index: 999;
   top: 0;
-  /* left: 100%; */
-    right: -120%;
+  left: 100%;
+    /* right: -120%; */
   width:50%;
   height: 100vh;
   background-color: #fff;
   box-shadow: 0px 10px 10px rgb(0 0 0 / 20%);
-  transition: left 0.6s;
 }
 
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 2px 0 4px rgba(0,0,0,.1);
+  transform: translateX(-100%);
+  transition: transform .4s;
+  z-index: 90;
+}
 
 #h-nav.panelactive {
-    /* right: 0;  */
-    left: 50%; 
+  left: 50%; 
 }
 
 #h-nav ul {
@@ -342,6 +354,7 @@ header img {
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
 }
+
 
 #h-nav li {
   position: relative;
@@ -2304,6 +2317,16 @@ footer {
   border:1.5px solid #79A1C0;
 }
 
+@media screen and (max-width: 480px){
+.career_recruit_box_sub_navy{
+     line-height: 1.2; 
+}
+
+.career_recruit_box_sub_aqua{
+    line-height: 1.2;
+}
+}
+
 .career_recruit_box_sub_aqua{
     color:#79A1C0;
 }
@@ -2696,9 +2719,19 @@ footer {
 
 @media screen and (max-width: 480px){
  #contact_submit p{
-  text-align: left;
+  /* text-align: left; */
   margin-bottom:1.5rem;
 } 
+}
+
+.contact_sponly{
+  display: none;
+}
+
+@media screen and (max-width: 480px){
+.contact_sponly{
+  display: block;
+}  
 }
 
 .Form-Btn {
